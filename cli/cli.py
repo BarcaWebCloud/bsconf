@@ -22,7 +22,7 @@
 import os
 import sys, traceback
 
-def start():
+def home():
     try:
       print('''
      	                 
@@ -41,7 +41,6 @@ def start():
         ''')
 
           optionFirst = input("bsconf> ")
-        
           while optionFirst == "1":
             print ('''
               Selecione o servidor:
@@ -58,13 +57,16 @@ def start():
               11) Hiawatha                   24) XAMPP
               12) Hiawatha                   25) WEBrick
               \n
-              0) Instalar todos servidores   
+              0) Instalar Todas
               \n
-              Digite 'back' para voltar     
+              Digite 'back' para voltar 
+              Digite 'home' para início
+              \n
+              Pressione 'Ctrl+C' para sair 
             ''')
             _server = input("bsconf> ")
             if _server == "1":
-              _version_server = input("\033[1;32mDeseja especificar a versão NGINX ? [y/n]> \033[1;m")
+              _version_server = input("\033[1;32mDeseja especificar a versão do NGINX ? [y/n]> \033[1;m")
               if _version_server == "y":
                 print("List all versions para NGINX")
             elif _server == "2":
@@ -118,20 +120,20 @@ def start():
             elif _server == "back":
               optionFirst = 0
             elif _server == "home":
-              optionFirst()
+              home()
             else:
               print ("Desculpe, este comando é inválido ")
           if optionFirst == "3":
             print('todo')
           elif optionFirst == "4"	:
             print('todo')
-
+          # categories
           def categories():
             while optionFirst == "2":
               print ('''
-                **************************** Categories *****************************
+                Selecione a categoria desejada:
 
-                1) Servidor Web HTTP				             9) Servidores de Arquivos
+                1) Servidor Web				             9) Servidores de Arquivos
                 2) Servidor de Email				             10) Servidores Proxy
                 3) Servidor de Backup				             11) Servidor de Impressão
                 4) Servidor de Banco de Dados            12) Servidor de Fax
@@ -139,61 +141,93 @@ def start():
                 6) Servidor de Aplicação                 14) Servidor de Virtualização
                 7) Servidor de Imagens                   15) Servidor de Sistema Operacional:
                 \n
-                0) Todos 
+                0) Instalar Todas 
                 \n
-                Digite 'back' para voltar    
+                Digite 'back' para voltar 
                 Digite 'home' para início
+                \n
+                Pressione 'Ctrl+C' para sair
               ''')
-              print ("Selecione uma categoria ou pressione (0) para instalar todas as ferramentas Kali Linux.\n")
-
-              opcion1 = input("bsconf> ")
-              if opcion1 == "back":
-                optionFirst()
-              elif opcion1 == "home":
-                optionFirst()
-              elif opcion1 == "0":
-                cmd = os.system("apt-get -f install acccheck ace-voip amap automater braa casefile cdpsnarf cisco-torch cookie-cadger copy-router-config dmitry dnmap dnsenum dnsmap dnsrecon dnstracer dnswalk dotdotpwn enum4linux enumiax exploitdb fierce firewalk fragroute fragrouter ghost-phisher golismero goofile lbd maltego-teeth masscan metagoofil miranda nmap p0f parsero recon-ng set smtp-user-enum snmpcheck sslcaudit sslsplit sslstrip sslyze thc-ipv6 theharvester tlssled twofi urlcrazy wireshark wol-e xplico ismtp intrace hping3 bbqsql bed cisco-auditing-tool cisco-global-exploiter cisco-ocs cisco-torch copy-router-config doona dotdotpwn greenbone-security-assistant hexorbase jsql lynis nmap ohrwurm openvas-cli openvas-manager openvas-scanner oscanner powerfuzzer sfuzz sidguesser siparmyknife sqlmap sqlninja sqlsus thc-ipv6 tnscmd10g unix-privesc-check yersinia aircrack-ng asleap bluelog blueranger bluesnarfer bully cowpatty crackle eapmd5pass fern-wifi-cracker ghost-phisher giskismet gqrx kalibrate-rtl killerbee kismet mdk3 mfcuk mfoc mfterm multimon-ng pixiewps reaver redfang spooftooph wifi-honey wifitap wifite apache-users arachni bbqsql blindelephant burpsuite cutycapt davtest deblaze dirb dirbuster fimap funkload grabber jboss-autopwn joomscan jsql maltego-teeth padbuster paros parsero plecost powerfuzzer proxystrike recon-ng skipfish sqlmap sqlninja sqlsus ua-tester uniscan vega w3af webscarab websploit wfuzz wpscan xsser zaproxy burpsuite dnschef fiked hamster-sidejack hexinject iaxflood inviteflood ismtp mitmproxy ohrwurm protos-sip rebind responder rtpbreak rtpinsertsound rtpmixsound sctpscan siparmyknife sipp sipvicious sniffjoke sslsplit sslstrip thc-ipv6 voiphopper webscarab wifi-honey wireshark xspy yersinia zaproxy cryptcat cymothoa dbd dns2tcp http-tunnel httptunnel intersect nishang polenum powersploit pwnat ridenum sbd u3-pwn webshells weevely casefile cutycapt dos2unix dradis keepnote magictree metagoofil nipper-ng pipal armitage backdoor-factory cisco-auditing-tool cisco-global-exploiter cisco-ocs cisco-torch crackle jboss-autopwn linux-exploit-suggester maltego-teeth set shellnoob sqlmap thc-ipv6 yersinia beef-xss binwalk bulk-extractor chntpw cuckoo dc3dd ddrescue dumpzilla extundelete foremost galleta guymager iphone-backup-analyzer p0f pdf-parser pdfid pdgmail peepdf volatility xplico dhcpig funkload iaxflood inviteflood ipv6-toolkit mdk3 reaver rtpflood slowhttptest t50 termineter thc-ipv6 thc-ssl-dos acccheck burpsuite cewl chntpw cisco-auditing-tool cmospwd creddump crunch findmyhash gpp-decrypt hash-identifier hexorbase john johnny keimpx maltego-teeth maskprocessor multiforcer ncrack oclgausscrack pack patator polenum rainbowcrack rcracki-mt rsmangler statsprocessor thc-pptp-bruter truecrack webscarab wordlists zaproxy apktool dex2jar python-distorm3 edb-debugger jad javasnoop jd ollydbg smali valgrind yara android-sdk apktool arduino dex2jar sakis3g smali && wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/")	
-              while opcion1 == "1":
-                print ("todo")
-                opcion2 = input("bsconf> ")
-                if opcion2 == "1":
-                  print ("todo")
-                elif opcion2 == "2":
-                  print ("todo")
-                elif opcion2 == "3":
-                  print ("todo")
-                elif opcion2 == "4":
-                  print ("todo")
-                elif opcion2 == "5":
-                  print ("todo")
-                elif opcion2 == "6":
-                  print ("todo")
-                elif opcion2 == "7":
-                  print ("todo")
-                elif opcion2 == "8":
-                  print ("todo")
-                elif opcion2 == "9":
-                  print ("todo")
-                elif opcion2 == "10":
-                  print ("todo")
-                elif opcion2 == "11":
-                  print ("todo")
-                elif opcion2 == "12":
-                  print ("todo")
-                elif opcion2 == "13":
-                  print ("todo")
-                elif opcion2 == "14":
-                  print ("todo")
-                elif opcion2 == "15":
-                  print ("todo")
-                elif opcion2 == "back":
-                  inicio()
-                elif opcion2 == "home":
-                  optionFirst()		
-                elif opcion2 == "0":
-                  print ("todo")
-                else:
-                  print ("Opa! Comando inválido")
+              
+              optionCategory = input("bsconf> ")
+              if optionCategory == "back":
+                home()
+              elif optionCategory == "home":
+                home()
+              elif optionCategory == "0":
+                print("todo:all")
+              # web servers
+              def listWebServer():
+                while optionCategory == "1":
+                  print ('''
+                    Selecione o servidor:
+                    \n
+                    1) NGINX                       15) HFS
+                    2) Jetty                       16) IBM
+                    3) Abyss                       17) Zeus
+                    4) AOLserver                   18) Lighttpd
+                    5) Apache Tomcat               19) LiteSpeed
+                    6) Apache2                     20) Microsoft IIS
+                    7) Caudium                     21) OpenBSD
+                    8) Caddy                       22) Oracle iPlanet
+                    9) Klone                       23) Oracle WebLogic
+                    10) CERN httpd                 24) Oracle Web Tier
+                    11) GlassFish                  25) Xitami
+                    12) Hiawatha                   26) XAMPP
+                    13) Yaws                       27) Zope
+                    14) Resin                      28) WEBrick
+                    \n
+                    0) Instalar Todas
+                    \n
+                    Digite 'back' para voltar 
+                    Digite 'home' para início
+                    \n
+                    Pressione 'Ctrl+C' para sair 
+                  ''')
+                  
+                  _optionwebServer = input("bsconf> ")
+                  if _optionwebServer == "back":
+                    categories()
+                  elif _optionwebServer == "home":
+                    home()
+                  elif _optionwebServer == "0":
+                    print("todo:all")
+                  # nginx
+                  def releasesNGINX():
+                    while _optionwebServer == "1":
+                      _version_server = input("Deseja especificar a versão do NGINX ? [y/n]> ")
+                      if _version_server == "y":
+                        print ('''
+                          Selecione a versão desejada
+                          \n
+                          1) 1.22.1 (latest)             8) 1.6.3
+                          2) 1.20.2                      9) 1.4.7
+                          3) 1.18.0                      10) 1.2.9
+                          4) 1.16.1                      11) 1.0.15
+                          5) 1.14.2                      12) 0.8.55
+                          6) 1.10.3                      13) 0.7.69
+                          7) 1.8.1                       14) 0.5.38            
+                          \n
+                          Digite 'back' para voltar 
+                          Digite 'home' para início
+                          \n
+                          Pressione 'Ctrl+C' para sair 
+                        ''')
+                        _releaseNGINX = input("bsconf> ")  
+                        if _releaseNGINX == "1":
+                          print("Instalando NGINX 1.22.1")
+                        elif _releaseNGINX == "2":
+                          print("Instalando NGINX 1.20.2")
+                        elif _releaseNGINX == "back":
+                          listWebServer()
+                        elif _releaseNGINX == "home":
+                          home()
+                        else:
+                          print("comando inválido")
+                      else:
+                        print("Instalando a versão mais rececnte...")
+                  releasesNGINX()
+              listWebServer()
           categories()
       optionFirst()
     except KeyboardInterrupt:
@@ -202,4 +236,4 @@ def start():
       traceback.print_exc(file=sys.stdout)
     sys.exit(0)
 if __name__ == "__main__":
-  start()
+  home()
